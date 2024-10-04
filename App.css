@@ -1,0 +1,158 @@
+/* Global App Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+/* Full Page App Container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  position: relative; /* Allows for positioning of child elements */
+}
+
+.background-video {
+  position: absolute; /* Position video absolutely */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Cover the area while maintaining aspect ratio */
+  z-index: -1; /* Place the video behind other content */
+}
+
+.dashboard {
+  background-color: rgba(30, 30, 30, 0.8); /* Slightly transparent dark background for readability */
+  border-radius: 10px;
+  padding: 60px; /* Increased padding for a larger container */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  width: 100%; /* Full width */
+  max-width: 900px; /* Adjusted max width for larger container */
+  margin: 0 auto; /* Center the dashboard horizontally */
+}
+
+.logo {
+  position: absolute; /* Allow positioning logos outside of the dashboard */
+  width: 150px; /* Set a larger width for the logos */
+  height: auto; /* Maintain aspect ratio */
+  top: 20px; /* Distance from the top */
+}
+
+.left-logo {
+  left: 20px; /* Distance from the left */
+}
+
+.right-logo {
+  right: 20px; /* Distance from the right */
+}
+
+h1 {
+  font-size: 2.5rem; /* Increased heading size */
+  margin-bottom: 20px;
+  color: #ffffff; /* White heading color */
+}
+
+.query-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%; /* Full width */
+  padding: 20px; /* Increased padding for the container */
+  border: 2px solid #444; /* Add a border for distinction */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(50, 50, 50, 0.7); /* Background with some transparency */
+}
+
+.query-container input {
+  padding: 15px; /* Increased padding */
+  font-size: 1.2rem; /* Increased font size for input */
+  border: 2px solid #444; /* Dark border */
+  border-radius: 5px;
+  width: 100%; /* Full width of the container */
+  margin-bottom: 10px;
+  background-color: #333; /* Input background */
+  color: #ffffff; /* Input text color */
+}
+
+.query-container button {
+  padding: 15px 30px; /* Increased button size */
+  font-size: 1.2rem; /* Increased font size for button */
+  background-color: #007BFF; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.query-container button:hover {
+  background-color: #0056b3; /* Darker button on hover */
+}
+
+.loading, .error {
+  font-size: 1.1rem;
+  color: #dddddd; /* Lighter text color for loading/error messages */
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.video-item {
+  background-color: #2a2a2a; /* Darker video item background */
+  padding: 20px; /* Increased padding for video items */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.video-item p {
+  margin: 5px 0;
+}
+
+.video-item a {
+  color: #007BFF; /* Link color */
+  text-decoration: none;
+}
+
+.video-item a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 20px; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  h1 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .query-container {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .query-container button {
+    padding: 10px 20px; /* Adjust button size for smaller screens */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .logo {
+    width: 80px; /* Adjust logo size for smaller screens */
+  }
+}

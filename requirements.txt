@@ -1,0 +1,6 @@
+fastapi
+tweepy
+google-api-python-client
+tensorflow
+geopy
+uvicorn
